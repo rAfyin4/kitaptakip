@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Takip Aracı</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="home-view" class="container">
+        <h1>📚 Kitap Takip Merkezi</h1>
+        <div id="book-grid" class="book-grid">
+            </div>
+        <button id="add-book-btn" class="main-button big-button">📖 Kitap Ekle</button>
+    </div>
+
+    <div id="book-detail-view" class="container hidden">
+        <button id="back-to-home-btn" class="back-button">← Ana Sayfaya Dön</button>
+        <h2 id="book-title-detail" style="text-align: center;">Kitap Adı</h2>
+
+        <div class="split-panel">
+            <div class="left-panel">
+                <h3>Ünite ve Test Yönetimi</h3>
+                
+                <button id="add-unit-btn" class="main-button big-button unit-action-button">
+                    ➕ Yeni Ünite Ekle
+                </button>
+                
+                <div id="unit-accordion" class="margin-top-20">
+                    </div>
+                
+            </div>
+
+            <div class="right-panel">
+                <h3>Önemli Notlar</h3>
+                <div id="notes-list" class="notes-list">
+                    </div>
+                <div id="add-note-container" class="add-note-container">
+                    <span class="plus-icon">+</span>
+                    <span>Not Ekle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Yeni Kitap Ekle</h3>
+            <form id="book-form">
+                <input type="text" id="book-name" placeholder="Kitap Adı" required>
+                <button type="submit" class="main-button big-button">Kaydet</button>
+            </form>
+            <button id="close-modal" class="back-button" style="margin-top: 15px;">Kapat</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
